@@ -8,7 +8,7 @@
 
 | Field | Details |
 |---|---|
-| **Student Name** | Abdul Samad Khan |
+| **Student Name** | Surbhi Agnihotri |
 | **Registration Number** | 24MIM10129 |
 
 ---
