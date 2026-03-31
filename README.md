@@ -166,32 +166,3 @@ printf "INFO: boot ok\nERROR: auth failed\nWARNING: disk 90%%\nERROR: segfault\n
 # Script 5: Manifesto Generator (interactive , it will ask you 5 questions)
 ./script5_manifesto_generator.sh
 ```
-
-
----
-
-## 🧠 Shell Concepts Covered
-
-| Concept | Script(s) |
-|---|---|
-| Variables & command substitution `$()` | 1, 2, 3, 4, 5 |
-| `if-then-elif-else` with multi-level fallback | 1, 2, 3, 4 |
-| `case` statement with dynamic spotlight selection | 2 |
-| Helper functions with `eval` parameter passing | 3, 5 |
-| `for` loop with arrays | 3 |
-| `while IFS= read -r` line-by-line file loop | 4 |
-| Retry loop with `sleep` (do-while style) | 4 |
-| `while` validation loop for required input | 5 |
-| Counter variables & arithmetic `$(())` | 4 |
-| Percentage & severity classification | 4 |
-| Positional arguments `$1`, `$2` | 4 |
-| `read -p` for interactive user input | 5 |
-| Arrays with `$RANDOM` indexing | 5 |
-| File writing with `>` (create) and `>>` (append) | 5 |
-| `printf` for column-aligned table output | 1, 2, 3 |
-| `grep`, `awk`, `cut`, `tail`, `wc`, `du`, `ls` | 2, 3, 4 |
-| `command -v` for portable binary detection | 1, 2, 3 |
-| Alias concept (demonstrated in comment) | 5 |
-| Risk-scoring function from permission string | 3 |
-
----
