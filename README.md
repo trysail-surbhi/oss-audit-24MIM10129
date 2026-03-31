@@ -1,7 +1,5 @@
 # 🐍 The Open Source Audit , Python
 
-> OSS NGMC Capstone Project | VITyarthi | Open Source Software Course
-
 ---
 
 ## 👤 Student Details
@@ -21,7 +19,7 @@
 **Official Site:** https://www.python.org  
 **Source Code:** https://github.com/python/cpython  
 
-Python was first released by Guido van Rossum on 20 February 1991. He named it after the BBC comedy *Monty Python's Flying Circus* , a small hint that programming should be fun. The PSF License is one of the most permissive open-source licences in existence: it imposes no restrictions on commercial use, redistribution, or modification. This is why Python ships inside products made by Google, NASA, Instagram, Netflix, and Dropbox , all without paying a royalty. Today Python is consistently ranked the world's most popular programming language, powering machine learning, web development, data science, automation, and systems scripting.
+Python was first released by Guido van Rossum on 20 February 1991.The PSF License is one of the most permissive open-source licences in existence: it imposes no restrictions on commercial use, redistribution, or modification. This is why Python ships inside products made by Google, NASA, Instagram, Netflix, and Dropbox , all without paying a royalty. Today Python is consistently ranked the world's most popular programming language, powering machine learning, web development, data science, automation, and systems scripting.
 
 ---
 
@@ -169,9 +167,6 @@ printf "INFO: boot ok\nERROR: auth failed\nWARNING: disk 90%%\nERROR: segfault\n
 ./script5_manifesto_generator.sh
 ```
 
-### On Linux (Ubuntu / Debian / Kali / WSL2)
-
-Identical steps , no changes needed. The scripts detect the environment automatically.
 
 ---
 
@@ -208,8 +203,6 @@ Through this project I understood:
 - **Why Python matters:** Guido van Rossum's decision to release Python under a permissive open-source licence in 1991 is why it now runs inside every industry , from space exploration to Instagram. A licence choice made one person's project into the world's most popular programming language.
 - **How the PSF licence differs from GPL:** The GPL requires derivative works to remain open; the PSF imposes no such condition , which is why corporations embed Python freely in commercial products.
 - **How Git Bash bridges two worlds:** The same Bash scripting that powers Linux automation runs on Windows via Git Bash , making open-source tooling accessible without a virtual machine.
-- **How file permissions protect software:** Python's `site-packages/` directory must be properly permissioned, otherwise malicious code could be silently injected into every Python import on a system.
-- **How log analysis connects to real engineering:** Python's `logging` module, Loguru, and Sentry all work on the same principle this Script 4 implements: scan text lines for severity keywords and surface actionable patterns.
 
 ---
 
