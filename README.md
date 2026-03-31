@@ -49,30 +49,31 @@ oss-audit-24MIM10129/
 ---
 
 ## 📜 Script Descriptions
-Script 1: System Identity Report
+**Script 1:** System Identity Report
 Displays a formatted welcome screen with system details including OS/Distro, kernel version, CPU architecture, and uptime. It performs a "check" to detect if Python is installed and prints its PSF license info.
 
-Concepts: Variables, printf alignment, if-elif-else fallbacks, and command substitution $().
+**Concepts:** Variables, printf alignment, if-elif-else fallbacks, and command substitution $().
 
-Script 2: FOSS Package Inspector
+**Script 2:** FOSS Package Inspector
 Queries the system package manager (dpkg/rpm) to verify Python 3. It uses a case statement to provide a tailored FOSS philosophy note and generates a formatted comparison table of common licenses (PSF, GPL, MIT, Apache).
 
-Concepts: case statements, grep piping, helper functions, and package management commands.
+**Concepts:** case statements, grep piping, helper functions, and package management commands.
 
-Script 3: Disk and Permission Auditor
+**Script 3:** Disk and Permission Auditor
 Loops through system and Python directories to report permissions, ownership, and folder size. It features a get_risk() function that assigns a LOW/HIGH security risk label based on folder access levels.
 
-Concepts: for loops, arrays, awk for text processing, du -sh for disk usage, and risk-scoring logic.
+**Concepts:** for loops, arrays, awk for text processing, du -sh for disk usage, and risk-scoring logic.
 
-Script 4: Log File Analyzer
+**Script 4:** Log File Analyzer
 Scans log files line-by-line to count "error," "warning," and "info" matches. It includes a 3-second retry loop if a file is missing, calculates the error percentage, and classifies the overall system severity.
 
-Concepts: while IFS= read loops, positional arguments ($1, $2), integer arithmetic, and sleep for retry logic.
+**Concepts:** while IFS= read loops, positional arguments ($1, $2), integer arithmetic, and sleep for retry logic.
 
-Script 5: Open Source Manifesto Generator
+**Script 5:** Open Source Manifesto Generator
 An interactive script that prompts the user for personal views on FOSS. It validates inputs, picks a random open-source quote using $RANDOM, and saves the final result into a new .txt file.
 
 Concepts: read -p input, > and >> file redirection, array indexing, and string concatenation.
+
 ---
 
 ## ⚙️ Dependencies
