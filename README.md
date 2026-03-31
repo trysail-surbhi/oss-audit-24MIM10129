@@ -195,23 +195,3 @@ printf "INFO: boot ok\nERROR: auth failed\nWARNING: disk 90%%\nERROR: segfault\n
 | Risk-scoring function from permission string | 3 |
 
 ---
-
-## 📚 Key Learning
-
-Through this project I understood:
-
-- **Why Python matters:** Guido van Rossum's decision to release Python under a permissive open-source licence in 1991 is why it now runs inside every industry , from space exploration to Instagram. A licence choice made one person's project into the world's most popular programming language.
-- **How the PSF licence differs from GPL:** The GPL requires derivative works to remain open; the PSF imposes no such condition , which is why corporations embed Python freely in commercial products.
-- **How Git Bash bridges two worlds:** The same Bash scripting that powers Linux automation runs on Windows via Git Bash , making open-source tooling accessible without a virtual machine.
-
----
-
-## 🔗 References
-
-- Python Official Site: https://www.python.org
-- CPython Source Code: https://github.com/python/cpython
-- PSF Licence Text: https://docs.python.org/3/license.html
-- GNU Bash Manual: https://gnu.org/software/bash/manual
-- Open Source Initiative: https://opensource.org/licenses
-
----
