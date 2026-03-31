@@ -49,57 +49,30 @@ oss-audit-24MIM10129/
 ---
 
 ## 📜 Script Descriptions
+Script 1: System Identity Report
+Displays a formatted welcome screen with system details including OS/Distro, kernel version, CPU architecture, and uptime. It performs a "check" to detect if Python is installed and prints its PSF license info.
 
-### Script 1 , System Identity Report
+Concepts: Variables, printf alignment, if-elif-else fallbacks, and command substitution $().
 
-Displays a fully formatted welcome screen inside a Unicode box border. Reports the OS/distro (with a multi-level fallback: `lsb_release` → `/etc/os-release` → Git Bash label), kernel version, Bash version, CPU architecture, hostname, logged-in user, home directory, system uptime (with a safe fallback for Git Bash), and the current date and time. Also detects whether Python is installed and prints its version alongside the PSF licence details.
+Script 2: FOSS Package Inspector
+Queries the system package manager (dpkg/rpm) to verify Python 3. It uses a case statement to provide a tailored FOSS philosophy note and generates a formatted comparison table of common licenses (PSF, GPL, MIT, Apache).
 
-**Concepts used:** Variables, `echo`, command substitution `$()`, `printf` for column alignment, conditional `if-elif-else` fallback detection, `uname`, `whoami`, `hostname`, `date`, `uptime`, `/etc/os-release`, `command -v`
+Concepts: case statements, grep piping, helper functions, and package management commands.
 
----
+Script 3: Disk and Permission Auditor
+Loops through system and Python directories to report permissions, ownership, and folder size. It features a get_risk() function that assigns a LOW/HIGH security risk label based on folder access levels.
 
-### Script 2 , FOSS Package Inspector
+Concepts: for loops, arrays, awk for text processing, du -sh for disk usage, and risk-scoring logic.
 
-Detects the system's package manager in order (`dpkg` → `rpm` → binary fallback) and queries whether Python 3 is installed, printing version and licence information. Uses a `case` statement to dynamically detect which FOSS tool is available on the current machine and print a tailored philosophy note about it. Ends with a formatted licence comparison table showing PSF vs GPL vs MIT vs Apache 2.0.
+Script 4: Log File Analyzer
+Scans log files line-by-line to count "error," "warning," and "info" matches. It includes a 3-second retry loop if a file is missing, calculates the error percentage, and classifies the overall system severity.
 
-**Concepts used:** `if-then-elif-else`, `case` statement, `dpkg -s`, `rpm -qi`, `command -v`, pipe with `grep`, `printf` for table formatting, helper functions
+Concepts: while IFS= read loops, positional arguments ($1, $2), integer arithmetic, and sleep for retry logic.
 
----
+Script 5: Open Source Manifesto Generator
+An interactive script that prompts the user for personal views on FOSS. It validates inputs, picks a random open-source quote using $RANDOM, and saves the final result into a new .txt file.
 
-### Script 3 , Disk and Permission Auditor
-
-Loops through core system directories and Python-specific install paths, reporting permissions, owner, and size. Includes a helper function `get_risk()` that reads the permission string and returns a LOW / MEDIUM / HIGH risk label, adding a layer of automated security analysis. Also loops over multiple Python binary names (`python3`, `python`, `python3.11`, etc.) to find whichever version is installed. Ends with a writability test on `/tmp`.
-
-**Concepts used:** `for` loop with arrays, `if-then-else`, nested function definition, `ls -ld`, `du -sh`, `awk '{print $1, $3}'`, `cut -f1`, `touch` for writability test, `command -v`, risk-scoring logic
-
----
-
-### Script 4 , Log File Analyzer
-
-Reads a log file line by line, counting matches for a keyword (default: `error`) as well as secondary counters for `warning` and `info` lines. Implements a retry loop that checks for the file up to three times with a 1-second pause between attempts. After scanning, computes the error percentage and classifies severity as LOW / MODERATE / HIGH. Shows the last 5 matching lines with line numbers.
-
-**Concepts used:** `while IFS= read -r`, `if-then`, counter variables `$((N + 1))`, `$1`/`$2` positional arguments, `grep -in`, `tail -5`, `wc -l`, retry loop with `sleep`, percentage arithmetic `$(())`, input validation
-
-**Usage:**
-```bash
-# Create a test log on Git Bash or Linux:
-printf "INFO: server started\nERROR: connection refused\nWARNING: high memory\nERROR: disk I/O failure\nINFO: retrying\n" > test.log
-
-# Run the analyzer:
-./script4_log_analyzer.sh test.log error
-
-# On Linux with a real system log:
-./script4_log_analyzer.sh /var/log/syslog error
-```
-
----
-
-### Script 5 , Open Source Manifesto Generator
-
-Prompts the user for five answers using a reusable `prompt_required()` validation helper that loops until a non-empty answer is provided. Assembles all answers into a personalised manifesto using string concatenation and writes it to `manifesto_<username>.txt` using `>` (create) and `>>` (append). Selects a random closing quote from a quotes array using `$RANDOM`. Demonstrates the alias concept in a comment block. Displays the finished manifesto with `cat`.
-
-**Concepts used:** `read -p`, `while` validation loop, helper function with `eval`, string concatenation, `>` and `>>` file redirection, arrays with `$RANDOM` indexing, `date`, `whoami`, `cat`, `clear`, `sleep`, alias concept (demonstrated in comment)
-
+Concepts: read -p input, > and >> file redirection, array indexing, and string concatenation.
 ---
 
 ## ⚙️ Dependencies
